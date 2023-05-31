@@ -18,7 +18,11 @@ struct Banner: View {
     var body: some View {
         TabView(selection: $currentPageIndex) {
             ForEach(0 ..< 6, id: \.self) { index in
-                Card(title:images.images[index].title,sinops:images.images[index].sinopse,indic:images.images[index].classificacao, imagem: images.images[index].VimageRef,video: images.images[index].video)
+                NavigationLink {
+                    MovieView(midia: images.images[index])
+                } label: {
+                    Card(title:images.images[index].title,sinops:images.images[index].sinopse,indic:images.images[index].classificacao, imagem: images.images[index].VimageRef,video: images.images[index].video)
+                }
             }
         }
         .tabViewStyle(.page)

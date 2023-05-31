@@ -13,7 +13,6 @@ struct CarouselView: View {
     @GestureState private var dragState = DragState.inactive
     @State var carouselLocation = 0
     
-    var item: Images
     var itemHeight:CGFloat
     var itemWidth:CGFloat
     var views:[AnyView]
@@ -41,11 +40,12 @@ struct CarouselView: View {
 //                Spacer()
 //            }
                 VStack{
+                    Spacer()
                     ZStack{
                         ForEach(0..<views.count, id: \.self){i in
                             VStack{
                                 NavigationLink {
-                                    MovieView(midia: item.images[i])
+                                    MovieView(midia: Images().images[i])
                                 } label: {
                                     self.views[i]
                                     
@@ -65,8 +65,7 @@ struct CarouselView: View {
                             state = .dragging(translation: drag.translation)
                         }
                         .onEnded(onDragEnded))
-                    
-                    Spacer()
+                    .padding(.bottom,24)
                 }
         }
     }
