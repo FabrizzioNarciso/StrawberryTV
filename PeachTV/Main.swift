@@ -18,7 +18,7 @@ struct PeachTVApp: App {
                     Buscar()
                 }
                     .tabItem {
-                        Label("Buscar", systemImage: "magnifyingglass")
+                        Label("Buscar Busca", systemImage: "magnifyingglass")
                     }
                 NavigationView {
                     //SomeView()
