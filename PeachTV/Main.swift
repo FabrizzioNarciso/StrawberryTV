@@ -17,6 +17,7 @@ struct PeachTVApp: App {
                 NavigationView{
                     AssistirAgora()
                 }
+                
                     .tabItem {
                         Label("Assistir Agora", systemImage: "play.circle.fill")
                     }
