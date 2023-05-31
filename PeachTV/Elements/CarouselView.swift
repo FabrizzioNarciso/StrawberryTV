@@ -41,7 +41,7 @@ struct CarouselView: View {
 //            }
                 VStack{
                     ZStack{
-                        ForEach(0..<views.count){i in
+                        ForEach(0..<views.count, id: \.self){i in
                             VStack{
                                 NavigationLink {
                                     MovieView()

@@ -7,21 +7,6 @@
 
 import SwiftUI
 
-struct Unit: View {
-    
-    
-    @State var image: String
-    
-    var body: some View {
-        Image(image)
-            .resizable()
-            .scaledToFit()
-            .cornerRadius(10)
-    }
-}
-
-
-
 
 struct ScrollHorizontal: View {
     @EnvironmentObject var item: Images
@@ -76,12 +61,14 @@ struct ScrollHorizontal: View {
                                 NavigationLink {
                                     MovieView()
                                 } label: {
-                                    Unit(image: item.images[index].HimageRef)
-                                        .frame(height: UIScreen.main.bounds.height*0.13)
+                                    Image(item.images[index].HimageRef)
+                                        .resizable()
+                                        .cornerRadius(10)
+                                        .frame(width: UIScreen.main.bounds.width*0.44,height: UIScreen.main.bounds.height*0.10)
                                 }
-                                //.padding(.horizontal)
+                                
                     
-                                .frame(height: UIScreen.main.bounds.height*0.11)
+                        
                                 if top10is == true {
                                     HStack {
                                         Text("\(index + 1)")
@@ -94,13 +81,13 @@ struct ScrollHorizontal: View {
                                                     .foregroundColor(.white)
                                                 Spacer()
                                             }
-                                            //.padding(.leading,1)
+                                
                                             HStack {
                                                 Text(item.images[index].genre)
                                                     .foregroundColor(.gray)
                                                 Spacer()
                                             }
-                                            //.padding(.leading,1)
+                            
                                         }
                                         Spacer()
                                     }
@@ -131,12 +118,6 @@ struct ScrollHorizontal: View {
                             }
                             
                         }
-<<<<<<< Updated upstream
-                        
-                        //.padding(.leading)
-=======
-                      
->>>>>>> Stashed changes
                     }
         
                     .padding(.leading)
@@ -144,11 +125,6 @@ struct ScrollHorizontal: View {
                     
                 }
                 
-<<<<<<< Updated upstream
-                
-                //.padding(.leading)
-=======
->>>>>>> Stashed changes
                 .padding(.bottom,24)
                 
                 
