@@ -23,6 +23,9 @@
 		26832EC62A24EF9C004B66C3 /* AssistirAgora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26832EC52A24EF9C004B66C3 /* AssistirAgora.swift */; };
 		26A0A65B2A278CD0002AC09C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0A65A2A278CD0002AC09C /* Database.swift */; };
 		26FE67CD2A277A7B00676CFC /* Originals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE67CC2A277A7B00676CFC /* Originals.swift */; };
+		9A69D51B2A278F0400B20C35 /* CarouselFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69D5192A278F0400B20C35 /* CarouselFunc.swift */; };
+		9A69D51C2A278F0400B20C35 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69D51A2A278F0400B20C35 /* CarouselView.swift */; };
+		9A69D51E2A278F9900B20C35 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69D51D2A278F9900B20C35 /* MovieView.swift */; };
 		A3BE00552A24C64D00BA2F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BE00542A24C64D00BA2F71 /* Assets.xcassets */; };
 		A3BE00582A24C64D00BA2F71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BE00572A24C64D00BA2F71 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,9 @@
 		26832EC52A24EF9C004B66C3 /* AssistirAgora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistirAgora.swift; sourceTree = "<group>"; };
 		26A0A65A2A278CD0002AC09C /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		26FE67CC2A277A7B00676CFC /* Originals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Originals.swift; sourceTree = "<group>"; };
+		9A69D5192A278F0400B20C35 /* CarouselFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselFunc.swift; sourceTree = "<group>"; };
+		9A69D51A2A278F0400B20C35 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		9A69D51D2A278F9900B20C35 /* MovieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		A3BE004D2A24C64D00BA2F71 /* PeachTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeachTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BE00542A24C64D00BA2F71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3BE00572A24C64D00BA2F71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 				26832EB32A24CE84004B66C3 /* PlayerManager.swift */,
 				26832EBB2A24D870004B66C3 /* MidiaPlayer.swift */,
 				2660767C2A278A3B00F2446D /* ScrollHorizontal.swift */,
+				9A69D5192A278F0400B20C35 /* CarouselFunc.swift */,
+				9A69D51A2A278F0400B20C35 /* CarouselView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -78,6 +86,7 @@
 				26832EC52A24EF9C004B66C3 /* AssistirAgora.swift */,
 				26FE67CC2A277A7B00676CFC /* Originals.swift */,
 				2660767F2A278A3B00F2446D /* Buscar.swift */,
+				9A69D51D2A278F9900B20C35 /* MovieView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -204,12 +213,15 @@
 				26832EBA2A24D7D8004B66C3 /* Tabbar.swift in Sources */,
 				266076802A278A3B00F2446D /* ScrollHorizontal.swift in Sources */,
 				266076822A278A3B00F2446D /* Main.swift in Sources */,
+				9A69D51B2A278F0400B20C35 /* CarouselFunc.swift in Sources */,
 				266076832A278A3B00F2446D /* Buscar.swift in Sources */,
 				26832EB42A24CE84004B66C3 /* PlayerManager.swift in Sources */,
 				26832EBC2A24D870004B66C3 /* MidiaPlayer.swift in Sources */,
 				26832EC62A24EF9C004B66C3 /* AssistirAgora.swift in Sources */,
+				9A69D51E2A278F9900B20C35 /* MovieView.swift in Sources */,
 				26A0A65B2A278CD0002AC09C /* Database.swift in Sources */,
 				26FE67CD2A277A7B00676CFC /* Originals.swift in Sources */,
+				9A69D51C2A278F0400B20C35 /* CarouselView.swift in Sources */,
 				26832EB22A24CE7A004B66C3 /* Banner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

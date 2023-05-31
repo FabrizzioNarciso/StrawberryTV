@@ -76,7 +76,7 @@ struct ScrollHorizontal: View {
                                 NavigationLink {
                                     //filme
                                 } label: {
-                                    Unit(image: item.images[index].imageRef)
+                                    Unit(image: item.images[index].HimageRef)
                                 }
                                 //.padding(.horizontal)
                                 

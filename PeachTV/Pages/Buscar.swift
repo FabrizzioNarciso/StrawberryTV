@@ -30,15 +30,15 @@ struct Buscar: View {
                 LazyVGrid(columns: layout, spacing: 8) {
                     ForEach(category.images, id: \.self) {item in
                         NavigationLink {
-                            Category(genre: item.genre, image: item.imageRef)
+                            Category(genre: item.genre, image: item.VimageRef)
                         } label: {
                             ZStack {
-                                Image(item.imageRef) //imagem
+                                Image(item.VimageRef) //imagem
                                     .resizable()
                                     .scaledToFill()
                                     .cornerRadius(10)
                                 
-                                Image(item.imageRef) //overlay escuro
+                                Image(item.VimageRef) //overlay escuro
                                     .renderingMode(.template)
                                     .resizable()
                                     .scaledToFit()
