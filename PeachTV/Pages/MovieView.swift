@@ -19,7 +19,7 @@ struct MovieView: View {
             VStack{
                 ZStack{
                     Rectangle().frame(width: geometry.size.width, height: geometry.size.height)
-                        .foregroundColor(.red)
+                        .foregroundColor(.black)
                         .ignoresSafeArea()
                     ScrollView(showsIndicators: false){
                         Spacer(minLength: 326)
