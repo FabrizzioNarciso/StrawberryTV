@@ -23,14 +23,10 @@ struct PeachTVApp: App {
                 }
                 NavigationView{
                     Originals()
+                        .navigationTitle("Originals")
                 }
                     .tabItem {
                         Label("Originals", systemImage: "appletv.fill")
-                    }
-                        .navigationTitle("Originals")
-                }
-                .tabItem {
-                    Label("Originals", systemImage: "rectangle.fill")
                 }
                 NavigationView{
                     Loja()
