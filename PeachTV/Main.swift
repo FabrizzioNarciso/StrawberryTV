@@ -21,7 +21,7 @@ struct PeachTVApp: App {
                         Label("Buscar", systemImage: "magnifyingglass")
                     }
                 NavigationView {
-                    SomeView()
+                    //SomeView()
                 }
                     .tabItem {
                         Label("category", systemImage: "chevron.right")
