@@ -153,7 +153,7 @@ struct MovieView: View {
                             
                             VStack(alignment: .leading){
                                 Divider()
-                                Text("Cast&Crew")
+                                Text("Elenco e equipe")
                                     .font(.title2)
                                     .fontWeight(.bold)
                                 ScrollView(.horizontal){
@@ -164,13 +164,13 @@ struct MovieView: View {
                                                     .resizable()
                                                     .frame(width:97,height: 97)
                                                     .padding(.bottom,4)
-                                                Text("Ator/Atriz")
+                                                Text("Nome")
                                                     .fontWeight(.semibold)
-                                                Text("Personagem")
+                                                Text("Função")
                                                     .fontDesign(.rounded)
                                                     .fontWeight(.medium)
                                                     .font(.subheadline)
-                                                    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8470588235)))
+                                                    .foregroundColor(Color(UIColor.gray))
                                             }.padding(.horizontal,2)
                                         }
                                     }
@@ -193,11 +193,11 @@ struct MovieView: View {
                                         }label:{
                                             VStack(alignment: .leading,spacing: 24){
                                                 VStack(alignment: .leading){
-                                                    Text("Title")
+                                                    Text("Titulo")
                                                         .font(.title3)
                                                         .fontWeight(.semibold)
                                                         .foregroundColor(Color(UIColor.white))
-                                                    Text("Genre")
+                                                    Text("Genero")
                                                         .font(Font.callout.smallCaps())
                                                         .fontDesign(.rounded)
                                                         .fontWeight(.regular)
@@ -240,10 +240,52 @@ struct MovieView: View {
                                         .fontWeight(.bold)
                                         .foregroundColor(Color(UIColor.white))
                                     
-                                    VStack{
+                                    VStack(alignment: .leading){
                                         Text("Título da informação")
-                                            .font(Font.callout)
+                                            .font(Font.footnote)
                                         Text("Informação")
+                                            .font(Font.footnote)
+                                            .foregroundColor(Color(UIColor.gray))
+                                    }
+                                    
+                                    VStack{
+                                        Text("Idiomas")
+                                            .font(.title2)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(Color(UIColor.white))
+                                        
+                                        Text("Audio")
+                                            .font(Font.footnote)
+                                        Text("Idiomas")
+                                            .font(Font.footnote)
+                                            .foregroundColor(Color(UIColor.gray))
+                                    }
+                                    
+                                    VStack{
+                                        Text("Legendas")
+                                            .font(.title2)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(Color(UIColor.white))
+                                        
+                                        Text("Audio")
+                                            .font(Font.footnote)
+                                        Text("Idiomas")
+                                            .font(Font.footnote)
+                                            .foregroundColor(Color(UIColor.gray))
+                                    }
+                                    
+                                    VStack{
+                                        Text("Accessibilidade")
+                                            .font(.title2)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(Color(UIColor.white))
+                                        
+                                        Text("Audio")
+                                            .font(Font.footnote)
+                                        
+                                        Text("Idiomas")
+                                            .font(Font.footnote)
+                                            .foregroundColor(Color(UIColor.gray))
                                     }
                                 }
                                 

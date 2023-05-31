@@ -33,13 +33,14 @@ struct Buscar: View {
                             Category(genre: item.genre, image: item.VimageRef)
                         } label: {
                             ZStack {
-                                Image(item.VimageRef) //imagem
+                                Image(item.HimageRef) //imagem
 
                                     .resizable()
                                     .scaledToFill()
                                     .cornerRadius(10)
                                 
-                                Image(item.VimageRef) //overlay escuro
+
+                                Image(item.HimageRef) //overlay escuro
 
                                     .renderingMode(.template)
                                     .resizable()
