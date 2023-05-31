@@ -79,7 +79,8 @@ struct ScrollHorizontal: View {
                                     Unit(image: item.images[index].HimageRef)
                                 }
                                 //.padding(.horizontal)
-                                
+                    
+                                .frame(height: UIScreen.main.bounds.height*0.11)
                                 if top10is == true {
                                     HStack {
                                         Text("\(index + 1)")
@@ -128,13 +129,17 @@ struct ScrollHorizontal: View {
                                     //.padding(.horizontal)
                                 }
                             }
+                            
                         }
+                        
                         //.padding(.leading)
                     }
-                    
+        
                     .padding(.leading)
                     
+                    
                 }
+                
                 
                 //.padding(.leading)
                 .padding(.bottom,24)

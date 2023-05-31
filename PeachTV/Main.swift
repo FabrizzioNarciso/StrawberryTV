@@ -15,6 +15,18 @@ struct PeachTVApp: App {
         WindowGroup {
             TabView {
                 NavigationView{
+                    AssistirAgora()
+                }
+                    .tabItem {
+                        Label("Assistir Agora", systemImage: "play.circle.fill")
+                    }
+                NavigationView{
+                    Originals()
+                }
+                    .tabItem {
+                        Label("Originals", systemImage: "rectangle.fill")
+                    }
+                NavigationView{
                     Buscar()
                 }
                     .tabItem {

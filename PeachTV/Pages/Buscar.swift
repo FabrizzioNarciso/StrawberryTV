@@ -34,11 +34,13 @@ struct Buscar: View {
                         } label: {
                             ZStack {
                                 Image(item.VimageRef) //imagem
+
                                     .resizable()
                                     .scaledToFill()
                                     .cornerRadius(10)
                                 
                                 Image(item.VimageRef) //overlay escuro
+
                                     .renderingMode(.template)
                                     .resizable()
                                     .scaledToFit()
