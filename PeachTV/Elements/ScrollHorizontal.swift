@@ -74,9 +74,10 @@ struct ScrollHorizontal: View {
                             VStack {
                                 
                                 NavigationLink {
-                                    //filme
+                                    MovieView()
                                 } label: {
                                     Unit(image: item.images[index].HimageRef)
+                                        .frame(height: UIScreen.main.bounds.height*0.13)
                                 }
                                 //.padding(.horizontal)
                     
@@ -125,14 +126,17 @@ struct ScrollHorizontal: View {
                                             Spacer()
                                         }
                                     }
-                                    //.frame(width: 170,height: 90)
-                                    //.padding(.horizontal)
+                                
                                 }
                             }
                             
                         }
+<<<<<<< Updated upstream
                         
                         //.padding(.leading)
+=======
+                      
+>>>>>>> Stashed changes
                     }
         
                     .padding(.leading)
@@ -140,9 +144,11 @@ struct ScrollHorizontal: View {
                     
                 }
                 
+<<<<<<< Updated upstream
                 
                 //.padding(.leading)
                 .padding(.bottom,24)
+                
                 
             }
             .background(
