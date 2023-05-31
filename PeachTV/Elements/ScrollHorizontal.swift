@@ -147,10 +147,13 @@ struct ScrollHorizontal: View {
 <<<<<<< Updated upstream
                 
                 //.padding(.leading)
+=======
+>>>>>>> Stashed changes
                 .padding(.bottom,24)
                 
                 
             }
+        
             .background(
                 Rectangle()
                     .fill(Gradient(colors: [.black.opacity(0), Color(red: 0.9, green: 0.9, blue: 0.9).opacity(0.1)]))
