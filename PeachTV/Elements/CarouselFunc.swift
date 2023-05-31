@@ -15,7 +15,7 @@ struct CarouselFunc: View {
                 ScrollView(showsIndicators: false){
                     VStack{
                         ZStack{
-                            CarouselView(itemHeight: geometry.size.height*0.53,itemWidth: geometry.size.width*0.8, views: anyviewArrayMovies(data: data))
+                            CarouselView(item: data,itemHeight: geometry.size.height*0.53,itemWidth: geometry.size.width*0.8, views: anyviewArrayMovies(data: data))
                         }.frame(width: geometry.size.width, height: geometry.size.height*0.6)
     //                        .background( LinearGradient(colors: [Color.white.opacity(0.01), Color.white.opacity(0.15)], startPoint: .center, endPoint: .bottom))
                             .background(.regularMaterial)

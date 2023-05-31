@@ -28,13 +28,13 @@ struct PeachTVApp: App {
                         Label("Originals", systemImage: "rectangle.fill")
                     }
                 NavigationView{
-                    Originals()
+                    Loja()
                 }
                     .tabItem {
                         Label("Loja", systemImage: "bag.fill")
                     }
                 NavigationView{
-                    Originals()
+                    Biblioteca()
                 }
                     .tabItem {
                         Label("Biblioteca", systemImage: "square.stack.fill")

@@ -10,25 +10,26 @@ import SwiftUI
 struct MovieView: View {
     @State private var expanded: Bool = false
     
-    let categoria = "terror"
-    let ano = 0000
-    let hora = "h min"
+    @State var midia: MidiaData
+    
     @State var bool = false
+    
     var body: some View {
         GeometryReader{ geometry in
             VStack{
                 ZStack{
                     Rectangle().frame(width: geometry.size.width, height: geometry.size.height)
-                        .foregroundColor(.black)
+                        .foregroundColor(.red)
                         .ignoresSafeArea()
                     ScrollView(showsIndicators: false){
                         Spacer(minLength: 326)
                         //Banner
+                        
                         VStack{
-                            Text("Title")
+                            Text(midia.title)
                                 .foregroundColor(.white)
                                 .font(.title)
-                            Text("\(categoria) ・ \(ano) ・ \(hora) Apple TV+")
+                            Text(midia.genre + "・" + midia.year + "・" + midia.time + "Apple TV+")
                                 .fontDesign(.rounded)
                                 .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5490196078)))
                             
@@ -73,7 +74,7 @@ struct MovieView: View {
                             }.padding()
                             
                         }
-                        .background(Material.ultraThin)
+                        .background(Gradient(colors: [.clear,.black]))
                         
                         ScrollHorizontal(title: "Trailers", top10is: false, subtitleis: true, sinopseis: false)
                             .environmentObject(images)
@@ -327,6 +328,6 @@ struct MovieView: View {
 
 struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieView()
+        MovieView(midia: Images().images[0])
     }
 }

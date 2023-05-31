@@ -59,7 +59,7 @@ struct ScrollHorizontal: View {
                             VStack {
                                 
                                 NavigationLink {
-                                    MovieView()
+                                    MovieView(midia: item.images[index])
                                 } label: {
                                     Image(item.images[index].HimageRef)
                                         .resizable()

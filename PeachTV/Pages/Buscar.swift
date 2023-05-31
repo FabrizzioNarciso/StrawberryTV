@@ -31,22 +31,20 @@ struct Buscar: View {
                     ForEach(category.images, id: \.self) {item in
                         NavigationLink {
                             MovieGenre(genre: item.genre, image: item.HimageRef)
+                               
                         } label: {
                             ZStack {
                                 Image(item.HimageRef) //imagem
 
                                     .resizable()
-                                    .scaledToFill()
+                                    .frame(width: UIScreen.main.bounds.width*0.44,height: UIScreen.main.bounds.height*0.10)
                                     .cornerRadius(10)
-                                
-                                Image(item.HimageRef) //overlay escuro
-
 
                                 Image(item.HimageRef) //overlay escuro
 
                                     .renderingMode(.template)
                                     .resizable()
-                                    .scaledToFit()
+                                    .frame(width: UIScreen.main.bounds.width*0.44,height: UIScreen.main.bounds.height*0.10)
                                     .cornerRadius(10)
                                     .foregroundColor(.black.opacity(0.25))
                                 
