@@ -11,20 +11,19 @@ struct CarouselFunc: View {
     @State var navigate = false
     @EnvironmentObject var data: Images
         var body: some View {
-            GeometryReader{geometry in
-                ScrollView(showsIndicators: false){
+           
+                
                     VStack{
-                        ZStack{
-                            CarouselView(item: data,itemHeight: geometry.size.height*0.53,itemWidth: geometry.size.width*0.8, views: anyviewArrayMovies(data: data))
-                        }.frame(width: geometry.size.width, height: geometry.size.height*0.6)
-    //                        .background( LinearGradient(colors: [Color.white.opacity(0.01), Color.white.opacity(0.15)], startPoint: .center, endPoint: .bottom))
-                            .background(.regularMaterial)
-                    }
-                }
-                
-    //            CarouselView(itemHeight: geometry.size.height, views: anyviewArrayMovies(carosselCard?s: carousselContent))
-                
-            }
+                        
+                        CarouselView(itemHeight: UIScreen.main.bounds.height*0.5,itemWidth: UIScreen.main.bounds.width*0.87, views: anyviewArrayMovies(data: data))
+                        }
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.70)
+                        .padding(.top)
+                        .background(
+                            Rectangle()
+                                .fill(Gradient(colors: [.black.opacity(0), Color(red: 0.9, green: 0.9, blue: 0.9).opacity(0.1)]))
+                        )
+
         }
     }
 
@@ -48,11 +47,14 @@ func anyviewArrayMovies(data: Images) -> [AnyView]{
 
                     VStack {
                         Spacer()
-                        Text(item.title) //Titulo
-                            .font(.title3.bold())
-                            .foregroundColor(.white)
-                            .padding(.leading, 16)
-                            .padding(.bottom, 16)
+                        HStack {
+                            Text(item.title) //Titulo
+                                .font(.title3.bold())
+                                .foregroundColor(.white)
+                                .padding(.bottom, 24)
+                            Spacer()
+                        }
+                        .padding(.leading,24)
                     }
             }
         ))

@@ -64,7 +64,7 @@ struct ScrollHorizontal: View {
                                     Image(item.images[index].HimageRef)
                                         .resizable()
                                         .cornerRadius(10)
-                                        .frame(width: UIScreen.main.bounds.width*0.44,height: UIScreen.main.bounds.height*0.10)
+                                        .frame(width: UIScreen.main.bounds.width*0.44,height: UIScreen.main.bounds.height*0.11)
                                 }
                                 
                     
@@ -98,6 +98,7 @@ struct ScrollHorizontal: View {
                                         HStack {
                                             Text(item.images[index].genre)
                                                 .foregroundColor(.gray)
+                                                .font(.title2)
                                             Spacer()
                                         }
                                         HStack {
@@ -108,12 +109,14 @@ struct ScrollHorizontal: View {
                                         }
                                         HStack {
                                             Text(item.images[index].sinopse)
+                                                .font(.footnote)
                                                 .foregroundColor(.gray)
                                                 .multilineTextAlignment(.leading)
                                             Spacer()
                                         }
+                                        .padding(.top,0)
                                     }
-                                
+                                    .frame(width: UIScreen.main.bounds.width*0.44,height: UIScreen.main.bounds.height*0.13)
                                 }
                             }
                             

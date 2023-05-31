@@ -16,35 +16,38 @@ struct PeachTVApp: App {
             TabView {
                 NavigationView{
                     AssistirAgora()
+                        .navigationTitle("Assistir Agora")
                 }
-                
-                    .tabItem {
-                        Label("Assistir Agora", systemImage: "play.circle.fill")
-                    }
+                .tabItem {
+                    Label("Assistir Agora", systemImage: "play.circle.fill")
+                }
                 NavigationView{
                     Originals()
+                        .navigationTitle("Originals")
                 }
-                    .tabItem {
-                        Label("Originals", systemImage: "rectangle.fill")
-                    }
+                .tabItem {
+                    Label("Originals", systemImage: "rectangle.fill")
+                }
                 NavigationView{
                     Loja()
+                        .navigationTitle("Loja")
                 }
-                    .tabItem {
-                        Label("Loja", systemImage: "bag.fill")
-                    }
+                .tabItem {
+                    Label("Loja", systemImage: "bag.fill")
+                }
                 NavigationView{
                     Biblioteca()
+                        .navigationTitle("Biblioteca")
                 }
-                    .tabItem {
-                        Label("Biblioteca", systemImage: "square.stack.fill")
-                    }
+                .tabItem {
+                    Label("Biblioteca", systemImage: "square.stack.fill")
+                }
                 NavigationView{
                     Buscar()
                 }
-                    .tabItem {
-                        Label("Buscar", systemImage: "magnifyingglass")
-                    }
+                .tabItem {
+                    Label("Buscar", systemImage: "magnifyingglass")
+                }
             }.environmentObject(images)
                 .preferredColorScheme(.dark)
         }
