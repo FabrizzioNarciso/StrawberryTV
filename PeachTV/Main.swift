@@ -27,16 +27,22 @@ struct PeachTVApp: App {
                         Label("Originals", systemImage: "rectangle.fill")
                     }
                 NavigationView{
+                    Originals()
+                }
+                    .tabItem {
+                        Label("Loja", systemImage: "bag.fill")
+                    }
+                NavigationView{
+                    Originals()
+                }
+                    .tabItem {
+                        Label("Biblioteca", systemImage: "square.stack.fill")
+                    }
+                NavigationView{
                     Buscar()
                 }
                     .tabItem {
                         Label("Buscar", systemImage: "magnifyingglass")
-                    }
-                NavigationView {
-                    //SomeView()
-                }
-                    .tabItem {
-                        Label("category", systemImage: "chevron.right")
                     }
             }.environmentObject(images)
                 .preferredColorScheme(.dark)
