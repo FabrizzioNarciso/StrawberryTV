@@ -14,7 +14,7 @@ struct Originals: View {
             VStack {
                 ZStack {
                     Banner()
-                        .frame(height: 600)
+                        .frame(height: UIScreen.main.bounds.height*0.7)
                     VStack {
                         HStack {
                             Spacer()

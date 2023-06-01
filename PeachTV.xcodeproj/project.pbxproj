@@ -31,6 +31,7 @@
 		A3A33EA92A2791AA00FEAE5E /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A33EA82A2791AA00FEAE5E /* MovieGenre.swift */; };
 		A3BE00552A24C64D00BA2F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BE00542A24C64D00BA2F71 /* Assets.xcassets */; };
 		A3BE00582A24C64D00BA2F71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BE00572A24C64D00BA2F71 /* Preview Assets.xcassets */; };
+		EA7CDE412A28C680009F3FAF /* teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CDE402A28C680009F3FAF /* teste.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		A3BE004D2A24C64D00BA2F71 /* PeachTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeachTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BE00542A24C64D00BA2F71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3BE00572A24C64D00BA2F71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA7CDE402A28C680009F3FAF /* teste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teste.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				26832EC52A24EF9C004B66C3 /* AssistirAgora.swift */,
 				26FE67CC2A277A7B00676CFC /* Originals.swift */,
 				26A0A65E2A27B5A1002AC09C /* Loja.swift */,
+				EA7CDE402A28C680009F3FAF /* teste.swift */,
 				26A0A65C2A27B55D002AC09C /* Biblioteca.swift */,
 				2660767F2A278A3B00F2446D /* Buscar.swift */,
 				A3A33EA82A2791AA00FEAE5E /* MovieGenre.swift */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7CDE412A28C680009F3FAF /* teste.swift in Sources */,
 				266076802A278A3B00F2446D /* ScrollHorizontal.swift in Sources */,
 				26A0A65F2A27B5A1002AC09C /* Loja.swift in Sources */,
 				266076822A278A3B00F2446D /* Main.swift in Sources */,
