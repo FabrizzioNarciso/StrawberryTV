@@ -7,15 +7,15 @@
 
 import SwiftUI
 import AVKit
+import UIKit
 
 struct MidiaPlayer: View {
     @Environment(\.dismiss) var dismiss
-    @State var videoName: String = "vv1"
+    @State var videoName: String
+    @State var play: Bool = false
     @ObservedObject var playerManager = PlayerManager()
-    
    
     var body: some View {
-
         TimelineView(.periodic(from: .now, by: 0.0001)) { context in
             ZStack {
                 VideoPlayer(player: playerManager.player!)
@@ -24,24 +24,16 @@ struct MidiaPlayer: View {
                         playerManager.player?.play()
                         playerManager.player?.isMuted = true
                     }
-                    //.ignoresSafeArea()
-                VStack {
-                    HStack {
-                        Button {
-                            dismiss()
-                        } label: {
-                            Text("X")
-                                .bold()
-                                .font(.largeTitle)
-                        }
-                        Spacer()
-                    }
-                    Spacer()
-                }
-                .padding()
-
+                    .ignoresSafeArea()
             }
-        }
+        }.navigationBarItems(leading: Button {
+            dismiss()
+        } label: {
+            Text("X")
+                .bold()
+                .foregroundColor(.white)
+        })
+        .toolbar(.hidden, for: .tabBar)
     }
     
 

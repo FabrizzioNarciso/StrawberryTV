@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieView: View {
     @State private var expanded: Bool = false
-    
+    @State private var isNavigating: Bool = false
     @State var midia: MidiaData
     
     @State var bool = false
@@ -49,7 +49,22 @@ struct MovieView: View {
                                 
                                 //Play Button
                                 VStack{
-                                    Botao(video: midia.video)
+                                    NavigationLink {
+                                        MidiaPlayer(videoName: midia.video)
+                                            .navigationBarBackButtonHidden()
+                                            
+                                    } label: {
+                                        HStack{
+                                            Image(systemName: "play.fill")
+                                            Text("Play")
+                                                .fontWeight(.heavy)
+                                        }.frame(width: 265, height: 48, alignment: .center)
+                                            .foregroundColor(Color(UIColor.darkText))
+                                            .background(Color(UIColor.white))
+                                            .cornerRadius(10)
+                                    }
+
+                                    
                                     //Sinopse
                                     VStack{
                                         
@@ -278,7 +293,7 @@ struct MovieView: View {
                                                 Text("Idiomas")
                                                     .font(Font.footnote)
                                                     .foregroundStyle(.secondary)
-                                               
+                                                
                                             }
                                             
                                         }
@@ -292,7 +307,7 @@ struct MovieView: View {
                                 .background(Color(UIColor.tertiarySystemFill))
                             }.background(Color(UIColor.systemBackground))
                         }
-                    } 
+                    }
                 }.sheet(isPresented: $expanded) {
                     NavigationView {
                         VStack {
