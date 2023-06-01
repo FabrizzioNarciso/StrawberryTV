@@ -82,7 +82,7 @@ struct Card: View {
                         VideoPlayer(player: playerManager.player!)
                             .disabled(true)
                             .frame(height: geometry.size.height*1.5)
-                            .padding(.top,-100)
+                            .padding(.top,-150)
                     }
                             
                     VStack {
