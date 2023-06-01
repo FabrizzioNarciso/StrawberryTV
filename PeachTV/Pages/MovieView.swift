@@ -21,7 +21,7 @@ struct MovieView: View {
                     VStack{
                         Image(midia.VimageRef)
                             .resizable()
-                            .frame(width: geometry.size.width, height: geometry.size.height*0.7)
+                            .frame(width: geometry.size.width, height: geometry.size.height)
                             .scaledToFill()
                             .ignoresSafeArea()
                         Spacer()
@@ -49,20 +49,7 @@ struct MovieView: View {
                                 
                                 //Play Button
                                 VStack{
-                                    Button {
-                                        bool = true
-                                    } label: {
-                                        HStack{
-                                            Image(systemName: "play.fill")
-                                            Text("Play")
-                                                .fontWeight(.heavy)
-                                        }
-                                        .frame(width: 265, height: 48, alignment: .center)
-                                        .foregroundColor(Color(UIColor.darkText))
-                                        .background(Color(UIColor.white))
-                                        .cornerRadius(10)
-                                        
-                                    }
+                                    Botao(video: midia.video)
                                     //Sinopse
                                     VStack{
                                         
@@ -95,7 +82,8 @@ struct MovieView: View {
                             }
                             
                             
-                            VStack{                            ScrollHorizontal(title: "Trailers", top10is: false, subtitleis: true, sinopseis: false)
+                            VStack{
+                                ScrollHorizontal(title: "Trailers", top10is: false, subtitleis: true, sinopseis: false)
                                     .environmentObject(images)
                                     .padding(.vertical)
                                 
@@ -146,51 +134,53 @@ struct MovieView: View {
                                     Text("Como assistir")
                                         .font(.title2)
                                         .fontWeight(.bold)
-                                    VStack(alignment: .leading,spacing: 0){
-                                        Rectangle()
-                                        Divider()
-                                        HStack{
-                                            VStack(alignment:.leading, spacing: 4){
-                                                Text("Assistir")
-                                                    .font(.title3)
-                                                    .bold()
-                                                Text("Assinado")
-                                                    .font(.subheadline)
-                                                    .fontDesign(.rounded)
-                                                    .fontWeight(.medium)
-                                                    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8470588235)))
-                                            }
-                                            .padding()
-                                            Spacer()
-                                            
-                                        }
-                                        .frame(height: 58)
-                                        .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2470588235)))
-                                        
-                                    }.frame(width:230,height: 187)
-                                        .cornerRadius(10)
-                                    
-                                    VStack(alignment: .leading){
-                                        Divider()
-                                        Text("Elenco e equipe")
-                                            .font(.title2)
-                                            .fontWeight(.bold)
-                                        ScrollView(.horizontal){
+                                    VStack {
+                                        VStack(alignment: .leading,spacing: 0){
+                                            Rectangle()
+                                            Divider()
                                             HStack{
-                                                ForEach(1..<10){_ in
-                                                    VStack(spacing: 4){
-                                                        Image(systemName: "person.circle.fill")
-                                                            .resizable()
-                                                            .frame(width:97,height: 97)
-                                                            .padding(.bottom,4)
-                                                        Text("Nome")
-                                                            .fontWeight(.semibold)
-                                                        Text("Função")
-                                                            .fontDesign(.rounded)
-                                                            .fontWeight(.medium)
-                                                            .font(.subheadline)
-                                                            .foregroundColor(Color(UIColor.gray))
-                                                    }.padding(.horizontal,2)
+                                                VStack(alignment:.leading, spacing: 4){
+                                                    Text("Assistir")
+                                                        .font(.title3)
+                                                        .bold()
+                                                    Text("Assinado")
+                                                        .font(.subheadline)
+                                                        .fontDesign(.rounded)
+                                                        .fontWeight(.medium)
+                                                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8470588235)))
+                                                }
+                                                .padding()
+                                                Spacer()
+                                                
+                                            }
+                                            .frame(height: 58)
+                                            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2470588235)))
+                                            
+                                        }.frame(width:230,height: 187)
+                                            .cornerRadius(10)
+                                        
+                                        VStack(alignment: .leading){
+                                            Divider()
+                                            Text("Elenco e equipe")
+                                                .font(.title2)
+                                                .fontWeight(.bold)
+                                            ScrollView(.horizontal){
+                                                HStack{
+                                                    ForEach(1..<10){_ in
+                                                        VStack(spacing: 4){
+                                                            Image(systemName: "person.circle.fill")
+                                                                .resizable()
+                                                                .frame(width:97,height: 97)
+                                                                .padding(.bottom,4)
+                                                            Text("Nome")
+                                                                .fontWeight(.semibold)
+                                                            Text("Função")
+                                                                .fontDesign(.rounded)
+                                                                .fontWeight(.medium)
+                                                                .font(.subheadline)
+                                                                .foregroundColor(Color(UIColor.gray))
+                                                        }.padding(.horizontal,2)
+                                                    }
                                                 }
                                             }
                                         }

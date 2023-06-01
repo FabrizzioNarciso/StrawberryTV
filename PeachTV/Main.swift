@@ -48,7 +48,8 @@ struct PeachTVApp: App {
                 .tabItem {
                     Label("Buscar", systemImage: "magnifyingglass")
                 }
-            }.environmentObject(images)
+            }
+            .environmentObject(images)
                 .preferredColorScheme(.dark)
         }
     }
